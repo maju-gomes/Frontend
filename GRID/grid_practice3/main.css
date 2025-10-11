@@ -28,12 +28,13 @@ main{
 .aside1 {
     background-color: blueviolet;
     grid-area: c;
+    height: auto;
 }
 
 .aside2 {
     background-color: rgb(100, 41, 155);
-    height: auto;
     grid-area: d;
+    height: auto;
 }
 
 footer {
@@ -41,7 +42,8 @@ footer {
     grid-area: e;
 }
 
-@media (max-width: 768px) {
+/* PARA CELULAR */
+@media (max-width: 600px) {
     body {
         display: grid;
         gap: 1rem;
@@ -55,15 +57,32 @@ footer {
     }
 }
 
-@media (max-width: 1024px) and (min-width: 768px){
+/* PARA TABLET */
+@media (min-width: 600px) and (max-width: 1024px) {
     body {
         display: grid;
         gap: 1rem;
         grid-template-rows: 1fr 2fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 6fr;
         grid-template-areas:
         "a a a a"
-        "d b b b"
-        "c c c c"
+        "c c b b"
+        "d d d d"
         "e e e e";
+    }
+}
+
+/* PARA DESKTOP */
+
+@media (min-width: 1024px) {
+    body {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 3fr 1fr;
+        grid-template-areas:
+        "a a a"
+        "c b d"
+        "e e e";
     }
 }
