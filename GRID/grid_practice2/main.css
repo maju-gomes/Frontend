@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "a a a a"
+    "b b c c"
+    "b b d e";
+}
+
+div {
+    border-radius: 1rem;
+    height: 5rem;
+}
+
+.sec-1{
+    background-color:blueviolet;
+    grid-area: a;
+}
+
+.sec-2 {
+    background-color: aquamarine;
+    grid-area: b;
+    height:auto;
+}
+
+.sec-3{
+    background-color: yellow;
+    grid-area: c;
+}
+
+.sec-4 {
+    background-color: brown;
+    grid-area: d;
+}
+
+.sec-5{
+    background-color: brown;
+    grid-area: e;
+}

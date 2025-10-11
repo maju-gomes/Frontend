@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header, main, aside, footer {
+    border-radius: 1rem;
+    height: 3rem;
+}
+
+body {
+    display: grid;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+header {
+    background-color: aqua;
+    grid-area: a;
+}
+
+main{
+    height: auto;
+    background-color: blanchedalmond;
+    grid-area: b;
+}
+
+.aside1 {
+    background-color: blueviolet;
+    grid-area: c;
+}
+
+.aside2 {
+    background-color: rgb(100, 41, 155);
+    height: auto;
+    grid-area: d;
+}
+
+footer {
+    background-color: greenyellow;
+    grid-area: e;
+}
+
+@media (max-width: 768px) {
+    body {
+        display: grid;
+        gap: 1rem;
+        grid-template-rows: 1fr 1fr 2fr 1fr 1fr;
+        grid-template-areas:
+        "a a a a a"
+        "c c c c c"
+        "b b b b b"
+        "d d d d d"
+        "e e e e e";
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px){
+    body {
+        display: grid;
+        gap: 1rem;
+        grid-template-rows: 1fr 2fr 1fr 1fr;
+        grid-template-areas:
+        "a a a a"
+        "d b b b"
+        "c c c c"
+        "e e e e";
+    }
+}
