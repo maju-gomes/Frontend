@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 8px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    margin: 8px;
+    min-height: 100px;
+    min-width: 100px;
+    width: 50%; /*largura*/
+    height: 50%; /*altura*/
+}
+
+.div-1{
+    background-color: aqua;
+}
+
+.div-2{
+    background-color: blueviolet;
+}
+
+.div-3 {
+    background-color: green;
+}
+
+.div-4 {
+    background-color: brown;
+}
+
+.div-5 {
+    background-color: bisque;
+}
+
+.div-6 {
+    background-color: orange;
+}

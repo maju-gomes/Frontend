@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+
+/* 
+SELETORES:
+
+* : tudo
+p.destaque : a tag p que tem a classe "destaque" -> maior prioridade, pois é mais específico
+.destaque: toda tag que tem a classe "destaque"
+#destaque: a marcação que tem o id igual a destaque
+section#destaque{}
+ol, ul {agrupamento: seleciona ambos}
+p a{seleciona todas as marcações de âncora dentro do p}
+p > a {seleciona todas as marcações de âncora FILHAS dentro do "p"}
+header + section {o + formata a section que está logo após da tag de header}
+.tx-grande.verde {seleciona a marcação que possui esses dois valores}
+
+.tx-grande .verde {seleciona a marcação c classe .verde que está dentro da tag q possui a classe .tx-grande}
+*/
+
+/* 
+p:hover {"hover" é uma subclasse - efeito de passar o mouse}
+li:first-child{}
+
+tr:nth-child(inteiro even ou odd) {
+    enésimo
+    even - filhos pares
+    odd - filhos ímpares
+}
+*/
+
+/* 
+img[src="face.png"]{seleciona a tag img que tem o atributo igual ao que está no valor}
+input[type="submit"]{}
+input[type="radio"]{}
+label[for]{}
+*/
+/* 
+header + section{
+    background-color: rgb(158, 255, 234);
+}
+
+:root {
+    /* definicao de variaveis no elemento principal root/html */
+    --princ-tx: blue;
+    --princ-bg: cadetblue;
+}
+
+body {
+  font-family: "Barrio", system-ui;
+
+  background-color: var(--princ-bg);
+}
+.tx-grande.verde {
+    color: crimson;
+}
+
+section {
+    height: 20rem;
+    background-color: #ededed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* section p{
+    /* nome da animação é livre */
+    animation-name: mostrar; 
+    animation-duration: 1s;
+    animation-delay: 5ms;
+    animation-iteration-count: infinite;
+}
+
+/* estudar MICROINTERAÇÕES */
+@keyframes mostrar{
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+div {
+    background-color: blue;
+    border-radius: 50%;
+    width: 100px;
+    height: 150px;
+    animation-name: bola;
+    animation-duration: 1s;
+    animation-delay: 5ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bola {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+}

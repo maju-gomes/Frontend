@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM Practice</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <header>
+        <h1>FORMS!</h1>
+    </header>
+    
+    <main>
+        <h2>Forms simples</h2>
+        <form action="#" class="teste">
+            <!-- label: define um rótulo pros elementos -->
+             <!-- o valor do for deve ser igual ao valor do id -->
+            <label for="nome">Nome:</label> <br>
+            <input type="text" name="name" id="nome" required> <br>
+            <label for="email">E-mail:</label> <br>
+            <input type="email" name="email" id="email"> <br> <br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <h2>Uso do Radio Buttons</h2>
+        <form action="#">
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label> <br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaSript">
+            <label for="javascript">Java</label> <br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label>
+        </form>
+
+        <h2>Uso do Checkbox</h2>
+        <form action="#">
+            <input type="checkbox" name="escolha1" id="dia" value="dia">
+            <label for="dia">Dia</label> <br>
+            <input type="checkbox" name="escolha2" id="noite" value="noite">
+            <label for="noite">Noite</label>
+
+        </form>
+    </main>
+
+</body>
+</html>

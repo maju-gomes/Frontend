@@ -1,0 +1,12 @@
+img {
+    /* a propriedade float deve ser colocada sempre no item q deve flutuar */
+    float: right;
+    margin-left: 1rem;
+}
+
+p {
+    text-align: justify;
+    margin-left: 1rem;
+    font-family:'Times New Roman', Times, serif;
+    clear: right;
+}
