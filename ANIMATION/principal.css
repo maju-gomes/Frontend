@@ -34,13 +34,13 @@ input[type="submit"]{}
 input[type="radio"]{}
 label[for]{}
 */
-/* 
+
 header + section{
     background-color: rgb(158, 255, 234);
 }
 
 :root {
-    /* definicao de variaveis no elemento principal root/html */
+    /*definicao de variaveis no elemento principal root/html*/
     --princ-tx: blue;
     --princ-bg: cadetblue;
 }
@@ -62,7 +62,7 @@ section {
     align-items: center;
 }
 
-/* section p{
+section p{
     /* nome da animação é livre */
     animation-name: mostrar; 
     animation-duration: 1s;
