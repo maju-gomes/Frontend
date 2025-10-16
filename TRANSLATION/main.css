@@ -1,0 +1,45 @@
+/* transição tem interação com o usuário */
+
+body {
+    /* !important: define a prioridade desse atributo */
+    background-color: blanchedalmond !important;
+    background-color: aqua;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+div {
+    padding: 2rem;
+    border: 0.5px solid black;
+    text-align: center;
+    font-size: 3rem;
+    filter: blur(2px);
+
+    /* o atributo transition define um efeito de transição do hover */
+    transition-property: all;
+    transition-duration: 0.2s;
+}
+
+div:hover {
+    filter: blur(0);
+    border-radius: 3rem;
+    box-shadow: 0 0 20px gray;
+}
+
+/* transition fica dentro do elemento */
+input {
+    /* transition: all 0.2s; */
+    /* valor: as propriedades que quero que se apliquem à transition */
+    transition-property: all;
+    transition-duration: 0.2s;
+    /* transition-behavior */
+
+}
+
+input:focus {
+    background-color: burlywood;
+}

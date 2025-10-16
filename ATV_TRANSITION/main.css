@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol{
+    display: flex;
+    justify-content: center;    
+    gap: 3rem;
+    list-style-type: none;
+}
+
+main > nav {
+    background-color: antiquewhite;
+    text-align: center;
+
+    /* o atributo transition define um efeito de transição do hover */
+    transition-property: all;
+    transition-duration: 0.2s;
+}
+
+a:hover {
+    filter: blur(0);
+    border-radius: 3rem;
+    box-shadow: 0 0 20px gray;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
