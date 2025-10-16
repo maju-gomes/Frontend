@@ -1,38 +1,44 @@
+/* importando uma fonte (do google fonts) */
 @import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
 
 /* 
 SELETORES:
 
-* : tudo
-p.destaque : a tag p que tem a classe "destaque" -> maior prioridade, pois é mais específico
-.destaque: toda tag que tem a classe "destaque"
-#destaque: a marcação que tem o id igual a destaque
-section#destaque{}
-ol, ul {agrupamento: seleciona ambos}
-p a{seleciona todas as marcações de âncora dentro do p}
-p > a {seleciona todas as marcações de âncora FILHAS dentro do "p"}
-header + section {o + formata a section que está logo após da tag de header}
-.tx-grande.verde {seleciona a marcação que possui esses dois valores}
+*: tudo;
 
-.tx-grande .verde {seleciona a marcação c classe .verde que está dentro da tag q possui a classe .tx-grande}
-*/
+p.destaque: a tag <p> que tem a classe "destaque" ->  dentre "p.destaque" e ".destaque", p.destaque possui maior prioridade, pois é mais específico;
 
-/* 
-p:hover {"hover" é uma subclasse - efeito de passar o mouse}
-li:first-child{}
+.destaque: toda tag que tem a classe "destaque";
 
-tr:nth-child(inteiro even ou odd) {
-    enésimo
-    even - filhos pares
-    odd - filhos ímpares
-}
-*/
+#destaque: a marcação que tem o id igual a "destaque";
 
-/* 
-img[src="face.png"]{seleciona a tag img que tem o atributo igual ao que está no valor}
-input[type="submit"]{}
-input[type="radio"]{}
-label[for]{}
+section#destaque: seleciona as tags <section> com id igual a "destaque";
+
+ol, ul: agrupamento, isto é, seleciona todos que foram listados. nesse caso, ol e ul;
+
+p a: seleciona todas as marcações de âncora dentro da tag <p>;
+
+p > a: seleciona todas as marcações de âncora FILHAS DIRETAS da tag <p>. Isto é: <p><a></a></p>;
+
+header + section: o + formata a section que está logo após da tag de header;
+
+.tx-grande.verde: seleciona a marcação que possui esses dois valores;
+
+.tx-grande .verde: seleciona a marcação com a classe .verde que está dentro da tag q possui a classe .tx-grande;
+
+p:hover: "hover" é uma subclasse - efeito de passar o mouse;
+
+li:first-child: seleciona o PRIMEIRO filho da tag <li>
+
+tr:nth-child(inteiro, even (par) ou odd (ímpar)): seleciona apenas as tags <tr> que estão de acordo com o que foi passado no parâmetro;
+
+img[src="face.png"]: seleciona a tag <img> que tem o atributo src igual ao que está no valor;
+
+input[type="submit"]: seleciona as tags <input> que têm o atributo type com valor igual a "submit";
+
+Aqui segue-se a mesma lógica...
+input[type="radio"]
+label[for]
 */
 
 header + section{
@@ -67,10 +73,9 @@ section p{
     animation-name: mostrar; 
     animation-duration: 1s;
     animation-delay: 5ms;
-    animation-iteration-count: infinite;
 }
 
-/* estudar MICROINTERAÇÕES */
+/* estudar MICROINTERAÇÕES (Dani comentou) */
 @keyframes mostrar{
     0% {
         transform: translateX(-100px);
@@ -83,6 +88,8 @@ section p{
     }
 }
 
+
+/* ANIMAÇÃO DE UMA ELIPSE */
 div {
     background-color: blue;
     border-radius: 50%;
@@ -91,6 +98,7 @@ div {
     animation-name: bola;
     animation-duration: 1s;
     animation-delay: 5ms;
+    /* pra bolinha ser animada infinatamente */
     animation-iteration-count: infinite;
 }
 
