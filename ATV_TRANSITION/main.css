@@ -1,6 +1,24 @@
+/* importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poller+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-color: rgb(255, 255, 243);
+}
+
+h1 {
+    font-family: "Poller One", sans-serif;
+}
+
+header, main > nav {
+    padding-bottom: 1rem;
+    background-color: rgb(201, 198, 106);
+    text-align: center;
 }
 
 ol{
@@ -10,22 +28,42 @@ ol{
     list-style-type: none;
 }
 
-main > nav {
-    background-color: antiquewhite;
-    text-align: center;
-
-    /* o atributo transition define um efeito de transição do hover */
-    transition-property: all;
-    transition-duration: 0.2s;
-}
-
-a:hover {
-    filter: blur(0);
-    border-radius: 3rem;
-    box-shadow: 0 0 20px gray;
-}
-
+/* TRANSIÇÃO DO TAMANHO DA FONTE */
 a{
+    /* necessário para que o efeito do sublinhado seja relativo ao nav (elemento pai) */
+    position: relative;
     text-decoration: none;
     color: black;
+    font-family: "Forum", serif;
+    font-size: 17px;
+    /* estrutura: transition: propriedade duracao; */
+    transition: font-size 0.3s;
+}
+
+/* efeito de crescimento da fonte */
+a:hover {
+    font-size: 19px
+}
+
+/* TRANSIÇÃO DO SUBLINHADO */
+/* ::after é um pseudoelemento que permite
+que estilizemos uma parte específica
+de um elemento, nesse caso a tag <a> */
+a::after {
+/* content é uma propriedade obrigatória, pois define o que o pseudoelemento mostrará. ex.: img, texto, nada ("")*/
+  content: "";
+  /* faz com que o conteúdo se posicione em relação ao pai (esse é o elemento filho) */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  /* a cor do sublinhado sempre será a do nav */
+  background: currentColor;
+  transition: 0.3s;
+}
+
+/* quando o usuário passar o mouse o underline aparece */
+a:hover::after {
+    width: 100%;
 }
