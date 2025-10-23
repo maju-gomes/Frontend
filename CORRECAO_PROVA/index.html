@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* seleciona todas as marcações */
+        * {
+            margin: 0;
+            padding: 0;
+            /* não altera as dimensões do elemento ao colocar-se o padding */
+            box-sizing: border-box;
+        }
+
+        :root {
+            --corcreme: #d8d4cb;
+            --azulescuro: #08254F;
+        }
+
+        /* body {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-direction: column;
+        } */
+
+        section:first-child {
+            background-color: var(--corcreme);
+            width: 100%;
+            padding: 5rem;
+        }
+
+        div {
+            background-color: var(--azulescuro);
+        }
+
+        section:nth-child(3) > p {
+            padding: 1rem;
+        }
+
+        section:nth-child(2) {
+            display: flex;
+            padding: 0;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        section:nth-child(2) h2 {
+            flex-basis: 100%;
+        }
+
+        section:nth-child(2), section:nth-child(3) {
+            max-width: 70rem;
+            margin: 0 auto;
+        }
+
+        section:nth-child(3) {
+            border: 1px solid black;
+        }
+
+        section:nth-child(2) div {
+            flex-basis: 31.422222%;
+            color: white;
+            background-color: var(--azulescuro);
+            text-align: center;
+            padding: 2rem;
+            width: 20rem;
+            position: relative;
+            top: 2rem;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <section>
+        <h1>Só porque tem que ter h1</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus placeat unde inventore praesentium distinctio natus ut quisquam! Possimus, nesciunt voluptas? Architecto molestias et earum voluptatem quae. Temporibus itaque fugit quo.</p>
+    </section>
+
+    <section>
+        <h2>Alguma coisa</h2>
+        <div>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+
+                <div>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+    </section>
+
+    <section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, fugiat. Exercitationem dolores voluptas corporis minima accusantium omnis quas nam explicabo tenetur cumque, sequi eveniet harum maxime nobis iusto distinctio in.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, fugiat. Exercitationem dolores voluptas corporis minima accusantium omnis quas nam explicabo tenetur cumque, sequi eveniet harum maxime nobis iusto distinctio in.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, fugiat. Exercitationem dolores voluptas corporis minima accusantium omnis quas nam explicabo tenetur cumque, sequi eveniet harum maxime nobis iusto distinctio in.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, fugiat. Exercitationem dolores voluptas corporis minima accusantium omnis quas nam explicabo tenetur cumque, sequi eveniet harum maxime nobis iusto distinctio in.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, fugiat. Exercitationem dolores voluptas corporis minima accusantium omnis quas nam explicabo tenetur cumque, sequi eveniet harum maxime nobis iusto distinctio in.</p>
+    </section>
+
+</body>
+</html>
