@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <!-- Não tem forms pq ele submete dados, e aqui não submetemos -->
+
+    <label>Número 1:
+        <input type="number" id="n1">
+    </label>
+    <label>Número 2:
+        <input type="number" id="n2">
+    </label>
+    <button id="somar">SOMAR</button>
+
+    <p id="resultado"></p>
+    <script>
+        // const cria uma variável imutável, constante
+        const btnsomar = document.querySelector("#somar");
+        btnsomar.addEventListener("click", function(e) {
+            console.log("EVENTO CLICAR");
+
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+            let somar = parseInt(n1) + parseInt(n2);
+
+            console.log(somar);
+            document.getElementById("resultado").innerHTML = somar;
+        });
+
+
+        // estrutura condicional
+
+        // let - variável considerada local
+        // let opcao = 2;
+        let opcao = window.prompt("Escolha um número: ");
+        opcao = parseInt(opcao); // converte string para inteiro
+
+        switch(opcao) {
+            case 1: console.log("VALOR: 1"); break; // break é opcional - (?)
+            case 2: console.log("VALOR: 2"); break;
+            case 3: console.log("VALOR: 3"); break;
+            // default é opcional - se não for nenhum dos cases acima, executa o default
+            default: console.log("NENHUMA OPÇÃO"); 
+        }
+
+        // ARRAY
+        let lista = [4, 5, 6, 7, 8, 9];
+        console.log(lista[2]); // mostra o valor 6, porque o array começa com 0
+
+        lista.push(5); // adiciona o 5 no fim do array
+        console.log(lista.toString());
+        console.log(lista.length); // mostra o tamanho do array
+
+        delete lista[1]; // deleta o valor 5 do array, porém mantém o índice
+        console.log(lista.toString()); // imprime a lista
+
+        lista[0] = 54; // altera o valor do índice 0
+
+        let alunos = ["Aline", "Amanda", "José", "Airton"];
+        let emocoes = ["Feliz", "Triste", "Calmo"];
+
+        console.log(Math.random()) // retorna um número entre entre 0 e 1 (não inclui o 0 nem o 1)
+
+        console.log(Math.random()*8);
+        let x = Math.floor(Math.random()*8); 
+        console.log(x);
+        document.write(`<p>${emocoes[x]}</p>`);
+        document.write("<p>" + emocoes[x] + "</p>");
+
+        for(let n = 0; n <=5; n++){ // valor inicial; condição; incremento
+            console.log(n)
+        }
+
+        for(let item in emocoes){
+            console.log(emocoes[item] + " - ");
+        }
+
+        alunos.forEach(function(index) {
+            console.log("foreach - " + index);
+        }
+
+    </script>
+
+</body>
+</html>

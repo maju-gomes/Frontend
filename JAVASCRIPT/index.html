@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // não funciona, porque o DOM ainda não criou o elemento com o id mensagem
+        document.getElementById("mensagem").innerHTML = "Olá mundo com getElementbyId.";
+    </script>
+    
+    <p id="mensagem"></p>
+    
+    <script>
+        /*
+        javascript é uma linguagem de programação, diferente de html (marcação), e css (formatação)
+        - html - conteúdo
+        - css - estilo
+        - javascript - interação
+
+        diferente de java (linguagem de prog, lado servidor, de alto nível)
+        sensível à capitulação (A a)
+        é possível usar no lado do cliente, servidor, mobile e desktop
+
+        DOM - Modelo de documento do objeto
+        */ 
+
+        window.alert("Olá mundo");
+        window.confirm("Como estás?");
+        var nome = window.prompt("Qual seu nome?");
+        document.write("<p>Olá mundo com document.write</p>");
+        document.getElementById("mensagem").innerHTML = "Olá mundo com getElementbyId.";
+        console.log("Olá mundo no console " + nome);
+
+
+        // var, let, const
+        var a; // devlaração variável global
+        let a; // declarção de variável local, mais indicada no geral, visto que ocupa menos espaço no computador do usuário
+        // javascript não é fortemente tipado, isto é, não é preciso declarar o tipo de variável e podemos mudá-la depois
+
+        let nome = "Infoweb"; //string
+        let inteiro = 3; //inteiro
+        let float = 5.8; //float
+        let boo = true; //booleano
+
+        console.log(inteiro+float+nome);
+        // mostra a mensagem no console do inspecionar
+        console.log(5000 + 20);
+        console.log(5000 - 20);
+        console.log(5000 * 20);
+        console.log(5000 / 20);
+        console.log("INTEIRO" + inteiro);
+        console.log("INTEIRO" + inteiro++); //significa +1
+        console.log("INTEIRO" + inteiro);
+
+        // operadores relacionais
+        console.log("==");
+        console.log("4==6");
+        console.log("!=");
+        console.log(4!=5);
+
+        console.log("'5' == 5");   
+        console.log("5" == 5);
+        console.log("'5' === 5")
+        console.log("5" === 5);
+
+
+        console.log(5<6);
+        console.log(5>6);
+        console.log(5>=6);
+        console.log(5<=6);
+        console.log(5<=6 && 5==5); // se ambos verdadeiros
+        console.log(5 <= 6 || 5 == 5);
+
+        // estrutura condicional
+
+        let idade = window.prompt("Qual sua idade?");
+
+        if(idade >= 18) {
+            console.log("Maior de idade")
+        }else {
+            console.log("Menor de idade")
+        }
+
+        </script>; 
+
+</body>
+</html>
