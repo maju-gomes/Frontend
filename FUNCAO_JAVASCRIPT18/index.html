@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções - JavaScript</title>
+</head>
+<body>
+
+    <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium maxime, voluptatem quae deleniti vero impedit quas ipsum, accusamus a at ullam necessitatibus. Vel quam debitis in, vitae veniam aliquam sint.</p>
+    <input type="color" id="cor">
+
+    <!-- BORDAAAAAA -->
+    <button id="borda2">MUDAR BORDA</button>
+
+    <!-- chama a 1ª forma -->
+    <button id="mudarcor" onclick="mudarcor()">MUDAR COR</button>
+
+    <!-- chama a forma mais indicada -->
+    <button id="btn">MUDAR COR DO P</button>
+    <script>
+        // BORDAAAA
+        let borda2 = document.getElementById("borda2");
+        // function(e) -> evento de clicar
+        borda2.addEventListener("click", function(e){
+            let cor = document.getElementById("cor").value;
+            document.getElementById("texto").style.border = `2rem solid ${cor}`;
+        })
+
+
+        // 2ª forma, mais indicada
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click", function(e){
+            let cor = document.getElementById("cor").value; //VALUE
+            // document.body.style.backgroundColor = cor;
+            document.getElementById("texto").style.color = cor;
+        });
+
+        function somar(){
+            return 3+8;
+        }
+        console.log(somar());
+        console.log(somar());
+        console.log(somar());
+
+        // outra função
+        function somar2(num1, num2){
+            return num1 + num2;
+        }
+        console.log(somar2(5, 8));
+
+        // outra função
+        function somar3(num1, num2, num3){
+            return num1 + num2 + num3;
+        }
+        console.log(somar3(5, 8, 9));
+
+        // outra função
+        function somar4(num1, num2){
+            // && = and
+            // isNaN verifica se verifica se o parâmetro é NÃO é número
+            // ! = not 
+            if(!isNaN(num1) && !isNaN(num2)){
+                return num1 + num2;
+            }
+            else return "Colocar parâmetro numérico."
+        }
+        console.log(somar4(5, "teste"));
+
+        // outra função
+        function somar5(num1=0, num2=0){
+            // essa definição de função inicializa a função 
+            return num1+num2;
+        }
+        console.log(somar5(7));
+
+        // outra função
+        // function borda(nome, borda){
+        //     document.body.style.borderWidth = borda+"rem";
+        //     document.body.style.borderStyle = "solid";
+        //     document.body.style.borderColor = nome;
+        // }
+        // borda("green", 2)
+
+        // outra função - 1ª forma
+        function mudarcor(){
+            let cor = document.getElementById("cor").value;
+            document.body.style.backgroundColor = cor; 
+        }
+    </script>
+
+</body>
+</html>
